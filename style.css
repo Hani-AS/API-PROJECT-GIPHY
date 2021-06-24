@@ -34,3 +34,7 @@ body {
   width: 110px;
   background: #9933ff;
 }
+
+.img-fluid {
+  height: 150px;
+}
