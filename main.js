@@ -19,7 +19,7 @@ const requestData = async (url) => {
 const main = async () => {
   // fetch url for trending gifs.
   const trendingData = await requestData(
-    `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=12&rating=g`
+    `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=25&rating=g`
   );
   createImages(trendingData.data);
   searchBtnHandler();

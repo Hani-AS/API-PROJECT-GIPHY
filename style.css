@@ -4,7 +4,7 @@ body {
   font-weight: 300;
 }
 
-.search {
+/* .search {
   position: relative;
   box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
 }
@@ -24,17 +24,24 @@ body {
   position: absolute;
   top: 20px;
   left: 16px;
-}
+} */
 
-.search button {
+/* .search button {
   position: absolute;
   top: 5px;
   right: 5px;
   height: 50px;
   width: 110px;
   background: #9933ff;
+} */
+span {
+  background-color: #9933ff !important;
 }
 
-.img-fluid {
-  height: 150px;
+.img-container {
+  columns: 4;
+}
+
+.col {
+  margin-bottom: 1em;
 }
