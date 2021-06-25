@@ -12,15 +12,15 @@ const observerFunc = () => {
       if (entry.intersectionRatio > 0.2) {
         offset += 26;
         if (publicValue) {
-          const inputData = await requestData(
+          const searchData = await requestData(
             `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${publicValue}&limit=25&offset=${offset}&rating=g&lang=en`
           );
-          createImages(inputData.data);
+          createImages(searchData.data);
         } else {
-          const paginationData = await requestData(
+          const trendingData = await requestData(
             `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=25&offset=${offset}&rating=g`
           );
-          createImages(paginationData.data);
+          createImages(trendingData.data);
         }
         const searchField = document.querySelector(".form-control");
         searchField.addEventListener("focus", () => {
