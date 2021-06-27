@@ -10,12 +10,19 @@
 </head>
 <body>
     <div class="container container_header">
-            <div class="row d-flex justify-content-center mt-2 mb-4">
+            <div class="row d-flex justify-content-center mt-2 mb-4 text-center">
                 <div class="col-sm-10 col-md-8 col-lg-6">
                     <img src="./assets/GIPHY Logo 300px.png" class="rounded mx-auto d-block img-fluid" alt="GIPHY-logo">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                         <span class="input-group-text" id="basic-addon2">Submit</span>
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="trending" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="trending">Trending GIFS</label>
+                      
+                        <input type="radio" class="btn-check" name="btnradio" id="random-gif" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="random-gif">Random GIFS</label>
                       </div>
                 </div>
             </div>
