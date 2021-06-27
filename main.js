@@ -1,4 +1,5 @@
 "use strict";
+import { btnListener } from "./btnListener.js";
 import { createContainer } from "./createElements.js";
 import observerFunc from "./intersectionObserver.js";
 import searchBtnHandler from "./searchBtnHandler.js";
@@ -23,6 +24,7 @@ const main = async () => {
   createContainer(trendingData.data);
   searchBtnHandler();
   observerFunc();
+  btnListener(trendingData.data);
 };
 
 window.addEventListener("load", main);

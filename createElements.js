@@ -1,5 +1,4 @@
 "use strict";
-import { main } from "./main.js";
 
 export const createContainer = (data) => {
   const mainContainer = document.createElement("div");

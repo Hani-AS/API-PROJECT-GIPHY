@@ -2,12 +2,12 @@
 
 import { createContainer } from "./createElements.js";
 import { requestData, API_KEY } from "./main.js";
-let publicValue;
+let publicSearchValue;
 const searchBtnHandler = () => {
   const btn = document.querySelector(".input-group-text");
   btn.addEventListener("click", async () => {
     const formInput = document.querySelector(".form-control").value.trim();
-    publicValue = formInput;
+    publicSearchValue = formInput;
     if (!formInput) {
       alert("You forgot to enter a phrase!");
     } else {
@@ -16,10 +16,16 @@ const searchBtnHandler = () => {
       );
       document.querySelector(".form-control").value = "";
       const clearContent = document.querySelector(".container_body");
-      clearContent.parentElement.removeChild(clearContent);
+      const clearRandomContent = document.querySelector(".image-container");
+      if (clearContent) {
+        clearContent.parentElement.removeChild(clearContent);
+      } else {
+        clearRandomContent.parentElement.removeChild(clearRandomContent);
+      }
+
       createContainer(searchData.data);
     }
   });
 };
-export { publicValue };
+export { publicSearchValue };
 export default searchBtnHandler;
