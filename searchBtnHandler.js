@@ -3,6 +3,8 @@
 import { createContainer } from "./createElements.js";
 import { requestData, API_KEY } from "./main.js";
 let publicSearchValue;
+
+//Search button
 const searchBtnHandler = () => {
   const btn = document.querySelector(".input-group-text");
   btn.addEventListener("click", async () => {
@@ -15,6 +17,8 @@ const searchBtnHandler = () => {
         `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${formInput}&limit=25&offset=0&rating=g&lang=en`
       );
       document.querySelector(".form-control").value = "";
+
+      // Clear container
       const clearContent = document.querySelector(".container_body");
       const clearRandomContent = document.querySelector(".image-container");
       if (clearContent) {

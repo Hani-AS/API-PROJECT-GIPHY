@@ -12,7 +12,7 @@
     <div class="container container_header">
             <div class="row d-flex justify-content-center mt-2 mb-4 text-center">
                 <div class="col-sm-10 col-md-8 col-lg-6">
-                    <img src="./assets/GIPHY Logo 300px.png" class="rounded mx-auto d-block img-fluid" alt="GIPHY-logo">
+                    <img src="./assets/GIPHY Logo 300px.png" class="rounded mx-auto d-block img-fluid" id="giphy-logo" alt="GIPHY-logo">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                         <span class="input-group-text" id="basic-addon2">Submit</span>
@@ -26,6 +26,32 @@
                       </div>
                 </div>
             </div>
+            
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title w-100 fw-bold" id="staticBackdropLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid text-center">
+              <img class="fetched-img img-fluid" src="" alt="">
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Share GIF</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-bottom">
+    <a class="fixed-logo" href="#giphy-logo"><button type="button" class="btn btn-info">Back to top</button></a>
+  </div>
       </div>
       <div class="container text-center">
           <hr>
