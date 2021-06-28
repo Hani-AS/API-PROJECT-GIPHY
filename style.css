@@ -4,16 +4,43 @@ body {
   font-weight: 300;
 }
 
+.input-group-text {
+  color: #fff;
+}
+
 span {
-  background-color: #9933ff !important;
+  background-image: linear-gradient(
+    45deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 50%,
+    rgb(153, 51, 255) 100%
+  );
 }
 
 span:hover {
   cursor: pointer;
+  background-image: linear-gradient(
+    75deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 50%,
+    rgb(153, 51, 255) 100%
+  );
 }
 
 .img-container {
   columns: 4;
+}
+
+@media only screen and (max-width: 768px) {
+  .img-container {
+    columns: 2;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .img-container {
+    columns: 1;
+  }
 }
 
 .col {
@@ -58,4 +85,33 @@ hr {
   color: #fff;
   background-color: #9933ff;
   border-color: #9933ff;
+}
+
+.modal-title {
+  background-color: transparent;
+  color: #fff;
+}
+
+.modal-header {
+  background-image: linear-gradient(
+    75deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 50%,
+    rgb(153, 51, 255) 100%
+  );
+}
+
+.modal-footer {
+  background-color: rgb(197, 197, 197);
+}
+
+.btn-info {
+  color: #fff;
+  background-image: linear-gradient(
+    75deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 50%,
+    rgb(153, 51, 255) 100%
+  );
+  border: none;
 }

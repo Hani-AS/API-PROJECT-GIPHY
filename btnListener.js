@@ -3,7 +3,9 @@
 import { createContainer } from "./createElements.js";
 import { API_KEY, requestData } from "./main.js";
 export let randomNumValue;
+
 export const btnListener = (trendingData) => {
+  //Trending button
   const trendingBtn = document.getElementById("trending");
   trendingBtn.addEventListener("click", () => {
     createContainer(trendingData);
@@ -16,6 +18,7 @@ export const btnListener = (trendingData) => {
     }
   });
 
+  //Random button
   const randomBtn = document.getElementById("random-gif");
   randomBtn.addEventListener("click", async () => {
     const randomData = await requestData(
