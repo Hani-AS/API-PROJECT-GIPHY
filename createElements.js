@@ -61,10 +61,14 @@ export const createRandomImage = (data) => {
   const cardText = document.createElement("p");
   cardText.className = "card-text fw-bold";
   cardText.textContent = `Title: ${data.data.title}`;
+  const cardBtn = document.createElement("button");
+  cardBtn.className = "btn btn-success get-more";
+  cardBtn.textContent = "Get more";
   const containerHeader = document.querySelector(".container_header");
   containerHeader.appendChild(mainContainer);
   mainContainer.appendChild(card);
   card.appendChild(img);
   card.appendChild(cardBody);
   cardBody.appendChild(cardText);
+  cardBody.appendChild(cardBtn);
 };
