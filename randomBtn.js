@@ -13,3 +13,11 @@ export const randomBtn = () => {
     createRandomImage(randomData);
   });
 };
+
+export const nestedRandomBtn = async (e) => {
+  console.log(e.target);
+  const randomData = await requestData(
+    `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&rating=g`
+  );
+  createRandomImage(randomData);
+};

@@ -1,6 +1,7 @@
 "use strict";
 
 import { copyURL } from "./copyURL.js";
+import { nestedRandomBtn } from "./randomBtn.js";
 
 // Create container
 export const createContainer = (data) => {
@@ -64,6 +65,7 @@ export const createRandomImage = (data) => {
   const cardBtn = document.createElement("button");
   cardBtn.className = "btn btn-success get-more";
   cardBtn.textContent = "Get more";
+  cardBtn.addEventListener("click", nestedRandomBtn);
   const containerHeader = document.querySelector(".container_header");
   containerHeader.appendChild(mainContainer);
   mainContainer.appendChild(card);

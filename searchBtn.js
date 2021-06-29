@@ -1,7 +1,7 @@
 "use strict";
 
 import { createContainer } from "./createElements.js";
-import { loadMoreSearch, loadMoreTrending } from "./loadMoreBtn.js";
+import { loadMoreSearch } from "./loadMoreBtn.js";
 import { API_KEY } from "./config.js";
 import { requestData } from "./helpers.js";
 
