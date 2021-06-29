@@ -68,15 +68,3 @@ export const createRandomImage = (data) => {
   card.appendChild(cardBody);
   cardBody.appendChild(cardText);
 };
-
-// export const createMoreImages = () => {
-//   const btnContainer = document.createElement("div");
-//   btnContainer.className = "container load-more-btn text-center";
-//   const loadMoreBtn = document.createElement("button");
-//   loadMoreBtn.className = "btn btn-outline-success";
-//   loadMoreBtn.textContent = "Load more";
-
-//   const bodyContainer = document.querySelector(".container_header");
-//   bodyContainer.appendChild(btnContainer);
-//   btnContainer.appendChild(loadMoreBtn);
-// };

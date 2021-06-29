@@ -1,7 +1,8 @@
 "use strict";
 
 import { createRandomImage } from "./createElements.js";
-import { API_KEY, requestData } from "./main.js";
+import { API_KEY } from "./config.js";
+import { requestData } from "./helpers.js";
 
 export const randomBtn = () => {
   const btn = document.querySelector(".random-btn");

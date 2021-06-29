@@ -2,10 +2,11 @@
 
 import { createContainer } from "./createElements.js";
 import { loadMoreSearch, loadMoreTrending } from "./loadMoreBtn.js";
-import { requestData, API_KEY } from "./main.js";
+import { API_KEY } from "./config.js";
+import { requestData } from "./helpers.js";
 
 //Search button
-const searchBtnHandler = () => {
+export const searchBtnHandler = () => {
   const btn = document.querySelector(".btn-outline-success");
   btn.addEventListener("click", async () => {
     let formInput = document.querySelector(".form-control").value.trim();
@@ -27,5 +28,3 @@ const searchBtnHandler = () => {
     }
   });
 };
-
-export default searchBtnHandler;
