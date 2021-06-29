@@ -11,7 +11,7 @@ export const searchBtn = () => {
   btn.addEventListener("click", async () => {
     let formInput = document.querySelector(".form-control").value.trim();
     if (!formInput) {
-      // alert("You forgot to enter a phrase!");
+      alert("You forgot to enter a phrase!");
     } else {
       const searchData = await requestData(
         `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${formInput}&limit=25&offset=0&rating=g&lang=en`
