@@ -3,7 +3,7 @@ import { createContainer } from "./createElements.js";
 import { homeBtn } from "./homeBtn.js";
 import { loadMoreTrending } from "./loadMoreBtn.js";
 import { randomBtn } from "./randomBtn.js";
-import { searchBtnHandler } from "./searchBtn.js";
+import { searchBtn } from "./searchBtn.js";
 import { requestData } from "./helpers.js";
 import { API_KEY } from "./config.js";
 
@@ -14,7 +14,7 @@ export const main = async () => {
   createContainer(trendingData.data);
   homeBtn(trendingData.data);
   randomBtn();
-  searchBtnHandler();
+  searchBtn();
   loadMoreTrending();
 };
 

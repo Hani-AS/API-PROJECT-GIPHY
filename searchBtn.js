@@ -1,12 +1,12 @@
 "use strict";
 
 import { createContainer } from "./createElements.js";
-import { loadMoreSearch, loadMoreTrending } from "./loadMoreBtn.js";
+import { loadMoreSearch } from "./loadMoreBtn.js";
 import { API_KEY } from "./config.js";
 import { requestData } from "./helpers.js";
 
 //Search button
-export const searchBtnHandler = () => {
+export const searchBtn = () => {
   const btn = document.querySelector(".btn-outline-success");
   btn.addEventListener("click", async () => {
     let formInput = document.querySelector(".form-control").value.trim();
