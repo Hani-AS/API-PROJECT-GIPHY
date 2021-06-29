@@ -3,7 +3,7 @@
 import { copyURL } from "./copyURL.js";
 import { nestedRandomBtn } from "./randomBtn.js";
 
-// Create container
+// Create containers
 export const createContainer = (data) => {
   const mainContainer = document.createElement("div");
   mainContainer.className = "container container_body mb-4";
