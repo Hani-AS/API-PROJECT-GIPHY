@@ -1,5 +1,7 @@
 "use strict";
 
+import { copyURL } from "./copyURL.js";
+
 // Create container
 export const createContainer = (data) => {
   const mainContainer = document.createElement("div");
@@ -27,9 +29,54 @@ export const createImages = (containerData) => {
       const modalTitle = document.querySelector(".modal-title");
       imgURL.src = `${element.images.downsized.url}`;
       modalTitle.textContent = `Title: ${element.title}`;
+      const urlField = document.querySelector(".url-field");
+      urlField.setAttribute("value", `${element.url}`);
+      const urlBtn = document.querySelector(".url-btn");
+      urlBtn.style.backgroundColor = "#9933ff";
+      urlBtn.textContent = "Copy";
+      copyURL();
     });
     const imgContainer = document.querySelector(".img-container");
     imgContainer.appendChild(col);
     col.appendChild(img);
   });
 };
+
+// Create random image
+export const createRandomImage = (data) => {
+  const loadMoreBtn = document.querySelector(".load-more-btn");
+  loadMoreBtn.innerHTML = "";
+  const clearContent = document.querySelector(".container_body");
+  clearContent.parentElement.removeChild(clearContent);
+  const mainContainer = document.createElement("div");
+  mainContainer.className =
+    "container container_body mb-4 d-flex justify-content-center";
+  const card = document.createElement("div");
+  card.className = "card";
+  const img = document.createElement("img");
+  img.className = "img-fluid img-thumbnail";
+  img.src = `${data.data.images.original.url}`;
+  const cardBody = document.createElement("div");
+  cardBody.className = "card-body";
+  const cardText = document.createElement("p");
+  cardText.className = "card-text fw-bold";
+  cardText.textContent = `Title: ${data.data.title}`;
+  const containerHeader = document.querySelector(".container_header");
+  containerHeader.appendChild(mainContainer);
+  mainContainer.appendChild(card);
+  card.appendChild(img);
+  card.appendChild(cardBody);
+  cardBody.appendChild(cardText);
+};
+
+// export const createMoreImages = () => {
+//   const btnContainer = document.createElement("div");
+//   btnContainer.className = "container load-more-btn text-center";
+//   const loadMoreBtn = document.createElement("button");
+//   loadMoreBtn.className = "btn btn-outline-success";
+//   loadMoreBtn.textContent = "Load more";
+
+//   const bodyContainer = document.querySelector(".container_header");
+//   bodyContainer.appendChild(btnContainer);
+//   btnContainer.appendChild(loadMoreBtn);
+// };
