@@ -16,7 +16,6 @@ export const searchBtn = () => {
       const searchData = await requestData(
         `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${formInput}&limit=25&offset=0&rating=g&lang=en`
       );
-      document.querySelector(".form-control").value = "";
 
       // Clear container
       const clearContent = document.querySelector(".container_body");
@@ -25,6 +24,7 @@ export const searchBtn = () => {
       loadMoreBtn.parentElement.removeChild(loadMoreBtn);
       createContainer(searchData.data);
       loadMoreSearch(formInput);
+      document.querySelector(".form-control").value = "";
     }
   });
 };
