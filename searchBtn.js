@@ -8,7 +8,8 @@ import { requestData } from "./helpers.js";
 //Search button
 export const searchBtn = () => {
   const btn = document.querySelector(".btn-outline-success");
-  btn.addEventListener("click", async () => {
+  btn.addEventListener("click", async (e) => {
+    e.preventDefault();
     let formInput = document.querySelector(".form-control").value.trim();
     if (!formInput) {
       alert("You forgot to enter a phrase!");
